@@ -1,5 +1,7 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - pip:
-        name: raven
+    - name: Upgrade all packages to the latest version
+      apt:
+        update_cache: yes
+        upgrade: yes
