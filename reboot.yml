@@ -1,7 +1,9 @@
-- name: Hello World Sample
+- name: Reboot Server Sample
   hosts: all
   tasks:
-    - name: Hello Message
+    - name: reboot host
+      shell: sudo reboot
       debug:
-        msg: "Hello World!"
+        msg: "The Instance Has been Rebooted"
+
 
