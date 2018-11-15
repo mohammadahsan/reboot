@@ -1,7 +1,12 @@
-- name: Hello World Sample
+- name: Network Getting Started First Playbook
+  connection: network_cli
   hosts: all
   tasks:
-      - name: Update all packages on a Debian/Ubuntu
-        apt:
-            update_cache: yes
-            upgrade: dist
+
+    - name: Get config for VyOS devices
+      vyos_facts:
+        gather_subset: all
+
+    - name: Display the config
+      debug:
+        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
