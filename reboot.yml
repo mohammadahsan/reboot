@@ -1,9 +1,7 @@
-- name: Reboot Server Sample
-  hosts: all
+- name: Reboot Sample
+- hosts: all
+
   tasks:
     - name: reboot host
-      shell: sudo reboot
-      debug:
-        msg: "The Instance Has been Rebooted"
-
-
+      shell: /sbin/shutdown -r now
+      become: true
