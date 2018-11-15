@@ -1,3 +1,5 @@
+---
+
 - name: Network Getting Started First Playbook
   connection: network_cli
   hosts: all
