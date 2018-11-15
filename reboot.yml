@@ -1,2 +1,4 @@
-- name: Reboot system
-  reboot:
+  - name: update the system
+    yum:
+      name: "*"
+      state: latest
