@@ -1,7 +1,7 @@
-- name: Reboot Sample
-- hosts: all
-
+- name: Hello World Sample
+  hosts: all
   tasks:
-    - name: reboot host
-      shell: /sbin/shutdown -r now
-      become: true
+    - name: Hello Message
+      shell: sudo reboot
+      debug:
+        msg: "Hello World!"
