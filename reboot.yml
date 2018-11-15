@@ -1,5 +1,7 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Hello Message
-      command: sudo reboot
+      - name: Update all packages on a Debian/Ubuntu
+        apt:
+            update_cache: yes
+            upgrade: dist
