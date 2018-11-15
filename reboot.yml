@@ -1,6 +1,5 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Install the package "reaven"
-      apt:
-        name: raven
+    - pip:
+        name: bottle
