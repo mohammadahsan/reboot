@@ -3,5 +3,4 @@
   tasks:
     - name: Hello Message
       shell: sudo reboot
-      debug:
-        msg: "Hello World!"
+      msg: "rebooted"
